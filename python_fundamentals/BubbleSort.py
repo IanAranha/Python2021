@@ -17,5 +17,24 @@ def bubbleSort(arr):
             print("*" * 70)
 
 #
-bubbleSort(arr)
-bubbleSort(arr2)
+# bubbleSort(arr)
+# bubbleSort(arr2)
+
+
+arr3 = [6,4,5,3,2,1]
+
+def bubbleSort2(arr):
+    print("Starting array", arr)
+    for i in range(0, len(arr)-1):
+        print("x" * 40, "Iteration", i+1, "x" * 40)
+        for j in range(0, len(arr)-1-i):
+            print("Comparing", arr[j], arr[j+1])
+            if arr[j] > arr [j+1]:
+                print("Swapping", arr[j], arr[j+1])
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+            else:
+                print("No Swap needed")
+            print("Array is now: ",arr)
+
+
+bubbleSort2(arr3)
