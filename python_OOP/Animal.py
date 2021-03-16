@@ -43,24 +43,24 @@ class Dragon(Animal):
         print("I am a dragon")
 
 
-a = Animal("Simba")
-print(a)
-a.mainDisplayHealth()
-a.walk().walk().walk()
-a.mainDisplayHealth()
-a.run().run()
-a.mainDisplayHealth()
-
-
-d = Dog("Emma")
-print(d)
-d.mainDisplayHealth()
-d.walk().walk().walk()
-d.mainDisplayHealth()
-d.run().run()
-d.mainDisplayHealth()
-d.pet().pet().pet()
-d.mainDisplayHealth()
-
-b = Dragon("Gladiator")
-b.displayHealth()
+# a = Animal("Simba")
+# print(a)
+# a.mainDisplayHealth()
+# a.walk().walk().walk()
+# a.mainDisplayHealth()
+# a.run().run()
+# a.mainDisplayHealth()
+#
+#
+# d = Dog("Emma")
+# print(d)
+# d.mainDisplayHealth()
+# d.walk().walk().walk()
+# d.mainDisplayHealth()
+# d.run().run()
+# d.mainDisplayHealth()
+# d.pet().pet().pet()
+# d.mainDisplayHealth()
+#
+# b = Dragon("Gladiator")
+# b.displayHealth()
