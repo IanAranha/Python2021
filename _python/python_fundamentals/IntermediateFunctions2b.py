@@ -28,7 +28,7 @@ def dictIteration(list):
         result = "".join([key + " - " + val + ", " for key, val in list[i].items()])
         print(result)
 
-# dictIteration(students)
+dictIteration(students)
 
 
 
@@ -45,12 +45,12 @@ def dictIteration(list):
 #
 #
 # #Now making the above code into a function
-# def dictIteration2(key, list):
-#     for i in range(0, len(list)):
-#         print(students[i][key])
+def dictIteration2(key, list):
+    for i in range(0, len(list)):
+        print(students[i][key])
 #
-# dictIteration2("first_name", students)
-
+dictIteration2("first_name", students)
+dictIteration2("last_name", students)
 
 
 # Say that
