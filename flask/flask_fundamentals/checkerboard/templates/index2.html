@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+    <style>
+        body {
+            text-align: center;
+            background-color:skyblue;
+            padding-left: 10%;
+        }
+
+        #wrapper{
+            text-align: center;
+            border: 3px solid maroon;
+            margin-left: 15%;
+            width: 60%;
+        }
+
+
+        h1 {
+            color:maroon;
+        } 
+       
+        .box1 {
+            float: left;
+            width: 60px;
+            height: 0;
+            padding-top: 13%;
+            background-color: black;
+        }
+        .box2 {
+            float: left;
+            width: 60px;
+            height: 0;
+            padding-top: 13%;
+            background-color: white;
+        }
+
+        #center{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            width: 490px;
+        }
+        
+        table, tr, td{
+            border: 1px solid black;          
+        }
+        
+        td{
+            width: 4em;
+        }
+
+        #SQ1{
+            background-color: black;
+
+        }
+
+        #SQ2{
+            background-color: white;
+        }
+
+        </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Checkerboard 2</h1>
+        <div id="center">
+            <table>
+                <tbody>
+                    {%for i in range(0, xForward)%}
+                        <tr>
+                            {%for i in range(0,yForward)%}
+                                <td id="SQ1">&nbsp;</td>
+                                <td id="SQ2">&nbsp;</td>
+                            {%endfor%}
+                        </tr>
+                        <tr>
+                            {%for i in range(0,yForward)%}
+                                <td id="SQ2">&nbsp;</td>
+                                <td id="SQ1">&nbsp;</td>
+                            {%endfor%}
+                        </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
