@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table, tr, td{
+            text-align: center;
+        }
+        
+        tr, td{
+            border: 1px solid black;
+        }
+    </style>
+    <title>HTML TABLE</title>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>First name</td>
+                    <td>Last name</td>
+                    <td>Full Name</td>
+                </tr>
+            </thead>
+            <tbody>
+                {%for user in all_users%}
+                    <tr>
+                        <td>{{user["first_name"]}}</td>
+                        <td>{{user["last_name"]}}</td>
+                        <td>{{user["first_name"] + " " + user["last_name"]}}</td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
