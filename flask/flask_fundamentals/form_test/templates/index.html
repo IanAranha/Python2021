@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>FORM TEST</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Index Page</h1>
+        <h3>Create a user:</h3>
+        <div id="form_box">
+            <form action="/users" method="post">
+                <label for="name">NAME: </label>
+                <input name="name" type="text" placeholder="Enter your name"> </br>
+                </br>
+                <label for="email">EMAIL:</label>
+                <input name="email" type="email" placeholder="Enter your email"> </br>
+                </br>
+                <input type="submit" value="Click to create user" id="button">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

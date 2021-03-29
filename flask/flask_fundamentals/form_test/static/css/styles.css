@@ -1,0 +1,22 @@
+#wrapper{
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 800px;
+    background-color: skyblue;
+    border: 5px outset red;
+    padding: 30px;
+}
+
+#form_box{
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 50px;
+    background-color: salmon;
+}
+
+#button{
+    height: 35px;
+    border-radius: 8px;
+    background-color: lightseagreen;
+    padding: 10px
+}
