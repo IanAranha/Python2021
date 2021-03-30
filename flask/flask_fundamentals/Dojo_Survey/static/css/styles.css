@@ -1,0 +1,21 @@
+body{
+    background-color: skyblue
+}
+
+#main{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 450px;
+    border: 4px solid darkblue;
+    background-color: lightslategrey;
+    line-height: 300%;
+    padding: 20px;
+}
+
+h3{
+    font-size:larger;
+    text-decoration: underline ;
+}
