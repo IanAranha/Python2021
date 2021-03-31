@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css', version=4.4 ) }}">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div id="main">
+        <h1>Dojo Fruit Store!</h1>
+
+        <p>What would you like to buy?</p>
+        <form action="/checkout" method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fruit Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Strawberry</td>
+                        <td>
+                            <select name="qty_Strawberry">
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Raspberry</td>
+                        <td>
+                            <select name="qty_Raspberry">
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>
+                            <select name="qty_Apple">
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Your Information:</h2>
+            <lable for="name">Name:</lable>
+            <input name="name" type="text" placeholder="Enter your name."></br>
+            <lable for="student_id">Student ID:</lable>
+            <input name="student_id" type="text" placeholder="Enter your Student ID."></br>
+            <input type="submit" value="Click here to submit">
+        </form>
+    </div>
+</body>
+</html>

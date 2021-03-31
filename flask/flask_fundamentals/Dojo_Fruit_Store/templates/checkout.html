@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css', version=4.4 ) }}">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div id="main">
+        <h1>Thank you for your order!</h1>
+
+        <p>We ordered {{counts}} items for you and charged your student account on {{x}}</p>
+        <p>You ordered:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fruit Name</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Strawberry</td>
+                    <td>{{request.form["qty_Strawberry"]}}</td>
+                </tr>
+                <tr>
+                    <td>Raspberry</td>
+                    <td>{{request.form["qty_Raspberry"]}}</td>
+                </tr>
+                <tr>
+                    <td>Apple</td>
+                    <td>{{request.form["qty_Apple"]}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Your Information:</h2>
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td>{{request.form["name"]}}</td>
+            </tr>
+            <tr>
+                <td>Student ID: </td>
+                <td>{{request.form["student_id"]}}</td>
+            </tr>
+        </table>
+        <form action="/goBack" method="post">
+            <input type="submit" value="Return to home page">
+        </form>
+    </div>
+</body>
+</html>
