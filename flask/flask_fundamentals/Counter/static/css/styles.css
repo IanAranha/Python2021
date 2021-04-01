@@ -1,0 +1,31 @@
+#wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 600px;
+    height: 450px;
+    border: 8px outset black;
+    background-color: burlywood;
+    text-align: center;
+}
+
+button{
+    display: inline-block;
+    width: 120px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: firebrick;
+    color: gold;
+    font-size: 1em;
+}
+
+#buttons{
+    min-width: 300px;
+    display: inline-block;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 0px auto;
+    border: 2px solid black;
+    border-radius: 3px;
+}
