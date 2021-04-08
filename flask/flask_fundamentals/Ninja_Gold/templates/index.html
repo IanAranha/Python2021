@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css' , version=15.65)}}">
+    <title>Number Game</title>
+</head>
+<body>
+    <div>
+        <div id="score">
+            <p>Your Gold: {{session["total_gold"]}}</p>
+        </div>
+        <div id="parent">
+            <div class="child">
+                <h2>Farm</h2>
+                <p>(Earns 10 - 20 golds)</p>
+                <form action="/process_money" method="post">
+                    <input name="location" type="hidden" value="FARM">
+                    <button>Find Gold</button>
+                </form>
+            </div>
+            <div class="child">
+                <h2>Cave</h2>
+                <p>(Earns 5 - 10 golds)</p>
+                <form action="/process_money" method="post">
+                    <input name="location" type="hidden" value="CAVE">
+                    <button>Find Gold</button>
+                </form>
+            </div>
+            <div class="child">
+                <h2>House</h2>
+                <p>(Earns 2 - 5 golds)</p>
+                <form action="/process_money" method="post">
+                    <input name="location" type="hidden" value="HOUSE">
+                    <button>Find Gold</button>
+                </form>
+            </div>
+            <div class="child">
+                <h2>Casino</h2>
+                <p>(Earns/Takes 0 - 50 golds)</p>
+                <form action="/process_money" method="post">
+                    <input name="location" type="hidden" value="CASINO">
+                    <button>Find Gold</button>
+                </form>
+            </div>
+        </div>
+        <div id="activities_box">
+            <p>Activities</p>
+            <div id="activity_box">
+                {% for activity in session["activity"] %}
+                {{activity | safe}}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
