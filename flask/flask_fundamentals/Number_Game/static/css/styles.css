@@ -1,0 +1,50 @@
+body{
+	margin: 5px;
+	border: 5px solid black;
+	border-radius: 3px;
+	background-color: skyblue;
+	height: 96vh;
+	max-width: 100vw;
+}
+
+#wrapper{
+	text-align:center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: salmon;
+	border: 5px solid darkblue;
+	border-radius: 8px;
+	padding: 30px;
+}
+
+.red_box{
+	border: 3px solid black;
+	border-radius: 8px;
+	background-color: red;
+	color: black;
+	padding: 10px;
+	text-align: center;
+	height: 100px;
+	width: 100px;
+	position: relative;
+	left: 50%;
+	top: 60%;
+	transform: translate(-50%, -5%);
+}
+
+.green_box{
+	border: 3px solid black;
+	border-radius: 8px;
+	background-color: green;
+	color: black;
+	padding: 15px;
+	text-align: center;
+	height: 100px;
+	width: 100px;
+	position: relative;
+	left: 50%;
+	top: 60%;
+	transform: translate(-50%, -5%);
+}

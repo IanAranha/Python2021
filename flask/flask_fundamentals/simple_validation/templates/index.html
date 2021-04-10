@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css' , version=1.21)}}">
+    <title>Basic Validation</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Enter Valid Name.</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form action="/process" method="post">
+            <label for="name">Name:</label>
+            <input name="name" type="text" placeholder="Enter a name"><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

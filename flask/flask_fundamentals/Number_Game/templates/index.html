@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css' , version=13.0)}}">
+    <title>Number Game</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Welcome to the Great Number Game!</h1>
+        <h4>I am thinking of a number between 1 and 100.</h4>
+        <h4>Take a guess:</h4>
+        {{session["random_number"]}}
+        {% if 'state' in session %}
+            {% if session["state"] == "low" %}
+                <div class="red_box">
+                    <p>LOW</p>
+                    <form action="/guess" method="post">
+                        <input type="text" name="input" placeholder="Enter your guess"></br>
+                        <button type="submit">Click to Submit</button>
+                    </form>
+                </div>
+            {% elif session["state"] == "high" %}
+                <div class="red_box">
+                    <p>HIGH</p>
+                    <form action="/guess" method="post">
+                        <input type="text" name="input" placeholder="Enter your guess"></br>
+                        <button type="submit">Click to Submit</button>
+                    </form>
+                </div>
+            {% elif session["state"] == "correct" %}
+            <div class="green_box">
+                <p>{{session["random_number"]}} is correct!</p>
+                <form action="/reset" method="post">
+                    <button type="submit">Play Again!</button>
+                </form>
+            </div>
+            {% endif %}
+        {% else %}
+            <p>
+                <form action="/guess" method="post">
+                    <input type="text" name="input" placeholder="Enter your guess"></br>
+                    <button type="submit">Click to Submit</button>
+                </form>
+            </p>
+        {% endif %}
+    </div>
+</body>
+</html>
